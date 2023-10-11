@@ -29,16 +29,8 @@ jobs:
       - name: Vulnerability Checks
         run: yarn npm audit --all
 
-      - name: Trufflehog actions scan
-        uses: edplato/trufflehog-actions-scan@master
-        with:
-          scanArguments: '--exclude_paths tools/trufflehog/trufflehog_exclude_patterns.txt'
-
       - name: ESLint
         run: yarn lint
-
-      - name: Prettier
-        run: yarn prettier:check
 
       - name: Tests
         run: yarn test

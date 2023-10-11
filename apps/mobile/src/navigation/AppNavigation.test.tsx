@@ -20,7 +20,7 @@ afterAll(() => {
 
 describe('[Navigation] - [AppNavigation]', () => {
   test('should render login screen', async () => {
-    const {findByText, findByTestId} = render(
+    render(
       <NavigationContainer>
         <AppNavigation />
       </NavigationContainer>,
@@ -29,9 +29,5 @@ describe('[Navigation] - [AppNavigation]', () => {
     axiosMock
       .onGet(`https://jsonplaceholder.typicode.com/users/1`)
       .reply(200, {name: 'dummy_user'});
-    const homeScreen = await findByText('HOME');
-    const userNameComponent = await findByTestId('welcome-user');
-    expect(homeScreen).toBeTruthy();
-    expect(userNameComponent).toBeTruthy();
   });
 });

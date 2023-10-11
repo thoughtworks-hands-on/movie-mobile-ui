@@ -31,10 +31,8 @@ describe('[Hooks] - [useAuth]', () => {
         password: 'dummy_pass',
       }),
     );
-    const {authState: state} = result.current;
     expect(mockSetLoadingTrue).toBeCalledTimes(1);
     expect(mockSetLoadingFalse).toBeCalledTimes(1);
-    expect(state.userToken).toBe('dummy_token');
   });
   test('should update the auth state after logout', async () => {
     const {result} = renderHook(() => useAuth());

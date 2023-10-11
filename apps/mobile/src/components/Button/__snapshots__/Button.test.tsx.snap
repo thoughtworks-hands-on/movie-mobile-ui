@@ -35,7 +35,7 @@ exports[`[Component] - [Button] should render button component correctly 1`] = `
   style={
     [
       {
-        "backgroundColor": "#6750A4",
+        "backgroundColor": "#E50914",
         "borderRadius": 5,
         "paddingBottom": 12,
         "paddingLeft": 15,
@@ -52,7 +52,7 @@ exports[`[Component] - [Button] should render button component correctly 1`] = `
       [
         {
           "alignSelf": "center",
-          "color": "#FFFFFF",
+          "color": "#ffffff",
           "fontSize": 16,
           "fontWeight": "500",
           "lineHeight": 24,
